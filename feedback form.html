@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+    <style>
+        /* Add your CSS styling for the feedback form */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+select {
+    height: 40px;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Customize the styles further as needed */
+
+    </style>
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <p>We value your feedback. Please take a moment to share your thoughts with us.</p>
+    
+    <form action="submit_feedback.php" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+            <option value="5">5 (Excellent)</option>
+            <option value="4">4 (Very Good)</option>
+            <option value="3">3 (Good)</option>
+            <option value="2">2 (Fair)</option>
+            <option value="1">1 (Poor)</option>
+        </select><br>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" required></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
